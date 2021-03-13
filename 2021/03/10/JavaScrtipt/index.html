@@ -25,14 +25,23 @@
 <meta property="og:image" content="http://example.com/2021/03/10/JavaScrtipt/2image/DOMname.png">
 <meta property="og:image" content="http://example.com/2021/03/10/JavaScrtipt/2image/DOMqs.png">
 <meta property="og:image" content="http://example.com/2021/03/10/JavaScrtipt/2image/DOMqsa.png">
-<meta property="og:image" content="http://example.com/DOMunique.png">
+<meta property="og:image" content="http://example.com/2021/03/10/JavaScrtipt/2image/DOMunique.png">
 <meta property="og:image" content="http://example.com/2021/03/10/JavaScrtipt/2image/Attrin.png">
 <meta property="og:image" content="http://example.com/2021/03/10/JavaScrtipt/2image/Attrih.png">
 <meta property="og:image" content="http://example.com/2021/03/10/JavaScrtipt/2image/Attrclass.png">
 <meta property="og:image" content="http://example.com/2021/03/10/JavaScrtipt/2image/Attrid.png">
 <meta property="og:image" content="http://example.com/2021/03/10/JavaScrtipt/2image/Attrsrc.png">
+<meta property="og:image" content="http://example.com/2021/03/10/JavaScrtipt/3image/fun.png">
+<meta property="og:image" content="http://example.com/2021/03/10/JavaScrtipt/3image/funu.png">
+<meta property="og:image" content="http://example.com/2021/03/10/JavaScrtipt/3image/mousee.png">
+<meta property="og:image" content="http://example.com/2021/03/10/JavaScrtipt/3image/tablee.png">
+<meta property="og:image" content="http://example.com/2021/03/10/JavaScrtipt/3image/keye.png">
+<meta property="og:image" content="http://example.com/2021/03/10/JavaScrtipt/3image/bome.png">
+<meta property="og:image" content="http://example.com/2021/03/10/JavaScrtipt/3image/dianji.png">
+<meta property="og:image" content="http://example.com/2021/03/10/JavaScrtipt/3image/boms.png">
+<meta property="og:image" content="http://example.com/2021/03/10/JavaScrtipt/3image/cssy.png">
 <meta property="article:published_time" content="2021-03-10T02:47:43.000Z">
-<meta property="article:modified_time" content="2021-03-13T04:54:07.846Z">
+<meta property="article:modified_time" content="2021-03-13T16:35:35.338Z">
 <meta property="article:author" content="罗嘉杰">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://example.com/2021/03/10/JavaScrtipt/1image/tanchuang.png">
@@ -56,6 +65,7 @@
 <meta name="generator" content="Hexo 5.4.0"></head>
 
 <body>
+  
   <div id="container" q-class="show:isCtnShow">
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
     <div class="left-col" q-class="show:isShow">
@@ -272,7 +282,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var odiv &#x3D; document.querySelectorAll(&quot;div&quot;)</span><br><span class="line">var odiv &#x3D; document.querySelectorAll(&quot;.content&quot;)</span><br><span class="line">var odiv &#x3D; document.querySelectorAll(&quot;#content&quot;)</span><br></pre></td></tr></table></figure>
 <p>上面分别表示为获取所有div标签名,获取所有class为content的标签和虎丘所有id为content的标签.并都返回一个数组<br><img src="/2021/03/10/JavaScrtipt/2image/DOMqsa.png"></p>
 <hr>
-<h3 id="通过特殊元素获取"><a href="#通过特殊元素获取" class="headerlink" title="通过特殊元素获取"></a>通过特殊元素获取</h3><p><img src="/DOMunique.png"></p>
+<h3 id="通过特殊元素获取"><a href="#通过特殊元素获取" class="headerlink" title="通过特殊元素获取"></a>通过特殊元素获取</h3><p><img src="/2021/03/10/JavaScrtipt/2image/DOMunique.png"></p>
 <h2 id="元素的自有属性"><a href="#元素的自有属性" class="headerlink" title="元素的自有属性"></a>元素的自有属性</h2><p>前面我们通过DOM拿到了元素标签,那么标签有哪些属性呢</p>
 <h3 id="内容属性之innerText"><a href="#内容属性之innerText" class="headerlink" title="内容属性之innerText"></a>内容属性之innerText</h3><p><img src="/2021/03/10/JavaScrtipt/2image/Attrin.png"></p>
 <blockquote>
@@ -282,6 +292,32 @@
 <h3 id="class属性"><a href="#class属性" class="headerlink" title="class属性"></a>class属性</h3><p><img src="/2021/03/10/JavaScrtipt/2image/Attrclass.png"></p>
 <h3 id="id属性"><a href="#id属性" class="headerlink" title="id属性"></a>id属性</h3><p><img src="/2021/03/10/JavaScrtipt/2image/Attrid.png"></p>
 <h3 id="src属性"><a href="#src属性" class="headerlink" title="src属性"></a>src属性</h3><p><img src="/2021/03/10/JavaScrtipt/2image/Attrsrc.png"></p>
+<h1 id="浏览器事件和函数应用"><a href="#浏览器事件和函数应用" class="headerlink" title="浏览器事件和函数应用"></a>浏览器事件和函数应用</h1><h2 id="如何定义一个函数"><a href="#如何定义一个函数" class="headerlink" title="如何定义一个函数"></a>如何定义一个函数</h2><p>一个函数首先需要有一个名字，就像每个人都有自己的名字一样。函数内可以传递多个参数，然后执行函数内部的代码，如果有返回值的话可以用一个变量来负责接收。</p>
+<blockquote>
+<p>注意：JavaScript中如果定义了两个同名同参的函数则会覆盖前面那个函数，没有重载!<br><img src="/2021/03/10/JavaScrtipt/3image/fun.png"></p>
+</blockquote>
+<h2 id="函数的调用"><a href="#函数的调用" class="headerlink" title="函数的调用"></a>函数的调用</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">function fn(a,b)&#123;</span><br><span class="line">    return a+b</span><br><span class="line">&#125;</span><br><span class="line">fn(1,2)</span><br></pre></td></tr></table></figure>
+<p>函数的调用很简单,直接通过函数名进行调用,里面传递需要的参数<br><img src="/2021/03/10/JavaScrtipt/3image/funu.png"></p>
+<span id="more"></span>
+
+<h2 id="浏览器事件"><a href="#浏览器事件" class="headerlink" title="浏览器事件"></a>浏览器事件</h2><p>所谓事件就是用户在一个网页上所做出的某些操作动作,操作动作就是事件。前端中会发生事件的对象</p>
+<ul>
+<li>DOM(document object model文档对象模型,一般值某个具体的元素)</li>
+<li>BOM(browser object model浏览器对象模型,指用户操作浏览器所作出的动作)<h3 id="1-鼠标事件"><a href="#1-鼠标事件" class="headerlink" title="1.鼠标事件"></a>1.鼠标事件</h3><img src="/2021/03/10/JavaScrtipt/3image/mousee.png"><br>mouseover和mouseenter的区别在于：</li>
+<li>mouseover的触发条件是当鼠标移入目前元素且它的子元素的时候触发</li>
+<li>mouseenter的触发条件仅当鼠标移入目标元素的时候才触发<br>(简单的说就是mouseenter不会冒泡，不会被子元素影响到)</li>
+</ul>
+<hr>
+<h3 id="2-表单事件"><a href="#2-表单事件" class="headerlink" title="2.表单事件"></a>2.表单事件</h3><h2 id><a href="#" class="headerlink" title></a><img src="/2021/03/10/JavaScrtipt/3image/tablee.png"></h2><h3 id="3-键盘事件"><a href="#3-键盘事件" class="headerlink" title="3.键盘事件"></a>3.键盘事件</h3><h2 id="-1"><a href="#-1" class="headerlink" title></a><img src="/2021/03/10/JavaScrtipt/3image/keye.png"></h2><h3 id="4-BOM事件"><a href="#4-BOM事件" class="headerlink" title="4.BOM事件"></a>4.BOM事件</h3><p><img src="/2021/03/10/JavaScrtipt/3image/bome.png"></p>
+<h2 id="DOM事件的使用方式"><a href="#DOM事件的使用方式" class="headerlink" title="DOM事件的使用方式"></a>DOM事件的使用方式</h2><p>首先先拿到元素标签,然后直接调用其对应的方法即可</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;button&gt;我是一个按钮&lt;&#x2F;button&gt;</span><br><span class="line">var obtn &#x3D; document.querySelector(&quot;button&quot;);</span><br><span class="line">obtn.onclick &#x3D; function()&#123;</span><br><span class="line">    console.log(&quot;你点击了这个按钮&quot;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>以上代表表示给button这个元素标签设置了一个点击事件,每次点击都会在控制台输出一句话。具体逻辑如下图<br><img src="/2021/03/10/JavaScrtipt/3image/dianji.png"><br><img src="/2021/03/10/JavaScrtipt/3image/boms.png"></p>
+<h2 id="元素的CSS操作"><a href="#元素的CSS操作" class="headerlink" title="元素的CSS操作"></a>元素的CSS操作</h2><p>改变元素样式方法有三种</p>
+<ul>
+<li>外部样式(单纯的js无法操作外部样式,所谓的外部样式是新建一个css文件按,之后使用link标签的href属性进行调用).假设你写了一个名字叫做mystyle的css样式文件,想引用的话可以<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;link rel&#x3D;&quot;stylesheet&quot; type&#x3D;&quot;text&#x2F;css&quot; href&#x3D;&quot;mystyle.css&quot;&gt;</span><br></pre></td></tr></table></figure></li>
+<li>内部样式(js可以操作HTML页面的任何元素,当然也包括style标签),例如如果想修改class名为ss的元素标签的color属性为绿色则可以(不推荐)<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">document.querySelector(&#39;style&#39;).innerHTML &#x3D; &quot;.ss&#123;color:green&#125;&quot;</span><br></pre></td></tr></table></figure></li>
+<li>行内样式<br>JS操作元素样式最常用方法,标签的自带属性style 通过点操作 元素.style.css属性 = “属性值”<br><img src="/2021/03/10/JavaScrtipt/3image/cssy.png"></li>
+</ul>
 
       
 
@@ -385,15 +421,11 @@
   
 <nav id="article-nav">
   
-    <a href="/2021/03/10/hexo%E7%9A%84%E4%BD%BF%E7%94%A8%E5%AE%89%E8%A3%85/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          hexo的使用安装
-        
-      </div>
-    </a>
   
+    <a href="/2021/03/10/hexo%E7%9A%84%E4%BD%BF%E7%94%A8%E5%AE%89%E8%A3%85/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">hexo的使用安装</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 
@@ -608,7 +640,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
                   </script>
                 </span>
               </p>
-              <p id="js-aboutme" style="margin:0 20px 0 20px;">很惭愧&lt;br&gt;&lt;br&gt;只做了一点微小的工作&lt;br&gt;谢谢大家</P>
+              <p id="js-aboutme" style="margin:0 20px 0 20px;">&lt;br&gt;&lt;br&gt;一只妄图改变命运的咸鱼&lt;br&gt;</P>
             </div>
           </div>
   	  	
@@ -684,5 +716,9 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
 
 </div>
   </div>
+  <!-- 雪花特效3 -->
+
+  <script type="text/javascript" src="/js/snow3.js"></script>
+
 <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/koharu.model.json"},"display":{"position":"right","width":250,"height":400},"mobile":{"show":false},"react":{"opacity":0.7},"log":false});</script></body>
 </html>
