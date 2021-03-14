@@ -88,6 +88,12 @@
 					<a class="zhihu" target="_blank" href="https://www.zhihu.com/" title="zhihu"><i class="icon-zhihu"></i></a>
 		        
 			</div>
+			<!-- 《左侧边栏添加--网易云音乐插件 -->
+			<!-- https://www.writebug.site/2018/04/21/hexo-yilia个性化之-添加背景音乐/ -->
+			
+				<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=228 height=86 src="//music.163.com/outchain/player?type=2&id=814264&auto=1&height=66"></iframe>
+			
+			<!-- 网易云音乐插件》-->
 		</nav>
 	</header>		
 </div>
@@ -153,164 +159,6 @@
           </div>
           <div id="js-content" class="content-ll">
             
-  
-    <article id="post-JavaScrtipt" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/03/10/JavaScrtipt/">JavaScript的使用</a>
-    </h1>
-  
-
-        
-        <a href="/2021/03/10/JavaScrtipt/" class="archive-article-date">
-  	<time datetime="2021-03-10T02:47:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-10</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="简单介绍"><a href="#简单介绍" class="headerlink" title="简单介绍"></a>简单介绍</h1><ul>
-<li>JavaScript是一种属于网络的脚本语言，已经被广泛用于Web应用开发，用来为网页添加各式各样的动态功能，为用户提供更流畅美观的浏览效果。</li>
-<li>一个完整的JavaScript的实现应该由下列三个不同的部分组成:核心,文档对象模型和浏览器对象模型<br>使用方法很简单,在html文件中使用script标签,在这个标签里面的语法就是js的语法了,页面刷新的时候会自动读取</li>
-</ul>
-<h2 id="变量-值"><a href="#变量-值" class="headerlink" title="变量/值"></a>变量/值</h2><p>命令行</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ var x=2</span><br></pre></td></tr></table></figure>
-<p>可以理解为在计算机内存中开辟了一个大小为2的储存空间，然后用变量x来指向这个存储空间</p>
-<h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><ul>
-<li>数字类型(Number)<br>  1.整数<br>  2.浮点数<br>  3.NaN(全程为not a number)</li>
-</ul>
-<hr>
-<ul>
-<li>字符类型(String)<br>字符类型就是使用单引号或者双引号包裹起来的<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ var x =<span class="string">&quot;string&quot;</span></span><br></pre></td></tr></table></figure>
-这行代码中x就是字符型变量</li>
-</ul>
-<hr>
-<ul>
-<li>对象类型(object)<br>对象数据类型可以视作一组数据的集合,一般我们用大括号进行定义,具体定义为<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var lm =&#123;</span><br><span class="line">    name:<span class="string">&quot;灵梦&quot;</span>,</span><br><span class="line">    age: 18</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-这里lm就是一个对象类型的数据,当中的name和age这两个我们称为lm这个对象的<strong>属性</strong>,我们可以很容易判断,name属性是字符型变量而age则是数字型变量.</li>
-</ul>
-<hr>
-<ul>
-<li>数组类型(array)<br>数组数据类型也是一组数据的集合,从逻辑和形式上讲与object几乎一致,我们一般用中括号[]来定义<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var arr =[1,2,3,4]</span><br></pre></td></tr></table></figure>
-上图的arr变量就是一个数组类型的变量,数组具有下标,从零开始。例如arr[0]表示拿到数组中的第一个值(也就是1),arr[3]则表示拿到数组中第四个值(4)</li>
-</ul>
-<hr>
-<ul>
-<li>undefined类型<br>这个数据类型特别有意思<br>当我们用var声明了一个变量但未对其进行赋值的时候，那么这个变量的值就是undefined<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var a</span><br></pre></td></tr></table></figure>
-上面a变量就是属于undefined的，因为他并没有等于某个具体的值。当然我们后面可以再给a进行赋值,这是就不需要用var关键词了.例如后面输入<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a=2</span><br></pre></td></tr></table></figure>
-那么这时a就从undefined类型变成了number类型</li>
-</ul>
-<hr>
-<ul>
-<li>null类型(空值类型)<br>这个数据类型也特别有意思,null一般我们需要人为赋值,那你可能想问了这既然是个空值，我们为啥要定义? 对于这个问题其实很简单.在实际开发中你可能刚开始并不知道应该如何使用这个变量(但是我知道这个变量肯定是要赋值成对象类型),后面可能根据实际需求来进行操作,这时你就可以先变为null。语法<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var a = null</span><br></pre></td></tr></table></figure></li>
-</ul>
-<hr>
-<ul>
-<li>boolean类型(布尔类型)<br>布尔是啥,其实很简单，他只有两个值,一个true一个false,也就是我们常说的真和假。boolean一般是某个逻辑判断的结果,比如两个值是否相等,是否大于或者是否小于<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var a &#x3D; 3 </span><br><span class="line">var b &#x3D; 4</span><br><span class="line">var f &#x3D; a&gt;b</span><br></pre></td></tr></table></figure>
-此时f的数据类型就是一个布尔值并且很明显是false,因为a并不大于b(注意:代码会先执行a&gt;b然后把其结果赋值给f)<h2 id="浏览器弹窗功能"><a href="#浏览器弹窗功能" class="headerlink" title="浏览器弹窗功能"></a>浏览器弹窗功能</h2><h3 id="单一弹窗"><a href="#单一弹窗" class="headerlink" title="单一弹窗"></a>单一弹窗</h3>语法<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alert(&quot;此处输入内容&quot;)</span><br></pre></td></tr></table></figure>
-可以在网页上弹出一个窗口,该窗口的内容可自定义,点击确定按钮可以关闭弹窗<img src="/2021/03/10/JavaScrtipt/1image/tanchuang.png"><h3 id="确认弹窗"><a href="#确认弹窗" class="headerlink" title="确认弹窗"></a>确认弹窗</h3>语法<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">confirm(&quot;此处输入内容&quot;)</span><br></pre></td></tr></table></figure>
-在网页上弹出一个窗口,该窗口的内容可自定义,按确定键返回一个true的布尔值,按取消键返回一个false的布尔值.值得一提的是,我们可以用这行代码进行人机交互.举个栗子,如果用户在关闭我们博客的时候我们可以显示这个弹窗,上面显示”你真的要关闭吗?”如果用户点击确定则直接关闭,如果用户选择取消则可判断用户为误点<br><img src="/2021/03/10/JavaScrtipt/1image/ctanchuang.png"><h3 id="输入弹窗"><a href="#输入弹窗" class="headerlink" title="输入弹窗"></a>输入弹窗</h3>语法<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">prompt(&quot;此处输入内容)</span><br></pre></td></tr></table></figure>
-在网页上方弹出一个窗口,该窗口内容可以自定义,输入信息后按确认键返回所输入的信息,按取消键则直接返回<br><img src="/2021/03/10/JavaScrtipt/1image/ptanchuang.png"><h2 id="JavaScript基本注意事项"><a href="#JavaScript基本注意事项" class="headerlink" title="JavaScript基本注意事项"></a>JavaScript基本注意事项</h2></li>
-<li>严格区分大小写(var x=1; var X=1;x和X不是同一个变量)</li>
-<li>语法字符使用英文字符</li>
-<li>缩进对齐</li>
-<li>分号结尾</li>
-</ul>
-<p>&lt;! – more –&gt;</p>
-<h1 id="基础DOM操作"><a href="#基础DOM操作" class="headerlink" title="基础DOM操作"></a>基础DOM操作</h1><h2 id="DOM的核心理念"><a href="#DOM的核心理念" class="headerlink" title="DOM的核心理念"></a>DOM的核心理念</h2><p>DOM(document object model)我们也称之为文档对象模型.是针对HTML文档的一个API(Application programming interface).DOM描绘了一个层次化的节点数,允许开发人员<strong>添加,移除和修改</strong>页面元素,值得一提的是元素的文字也是DOM的一个节点<br><img src="/2021/03/10/JavaScrtipt/2image/DOMtree.png"></p>
-<h2 id="JavaScript获取元素"><a href="#JavaScript获取元素" class="headerlink" title="JavaScript获取元素"></a>JavaScript获取元素</h2><h3 id="通过ID获取元素"><a href="#通过ID获取元素" class="headerlink" title="通过ID获取元素"></a>通过ID获取元素</h3><p>语法</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var content &#x3D; document.getElementById(&quot;content&quot;)</span><br></pre></td></tr></table></figure>
-<p>这样一来我们就得到id为content的那个元素(标签)了.DOM中的document代表的就是文档对象模型里面的文档对象.</p>
-<blockquote>
-<p>特别注意: 即使网页中有多个元素的id名称为同一个,那么js也只会选中第一个id名称符合条件的元素<br><img src="/2021/03/10/JavaScrtipt/2image/DOMid.png"></p>
-</blockquote>
-<hr>
-<h3 id="通过class获取元素"><a href="#通过class获取元素" class="headerlink" title="通过class获取元素"></a>通过class获取元素</h3><p>语法</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var wrap &#x3D; document.getElementsByClassName(&quot;wrap&quot;)</span><br></pre></td></tr></table></figure>
-<p>得到class为wrap的元素标签.</p>
-<blockquote>
-<p>返回的是一个元素标签的数组集合(可以用getElements的这个s看到).并且值得一提的是,即使网页上只有一个元素的class属性符合标准，通过js获取到的依然是一个数组,只是这个数组里面的元素只有一个而已<br><img src="/2021/03/10/JavaScrtipt/2image/DOMclass.png"></p>
-</blockquote>
-<hr>
-<h3 id="通过标签名获取元素"><a href="#通过标签名获取元素" class="headerlink" title="通过标签名获取元素"></a>通过标签名获取元素</h3><p>语法</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var wrap &#x3D; document.getElementsByTagName(&#39;div&#39;)</span><br></pre></td></tr></table></figure>
-<p>拿到所有的div标签</p>
-<blockquote>
-<p>同理我们可以看到Element后面加了s,所以拿到的和class一样,也是一个数组,即使只有一个<br><img src="/2021/03/10/JavaScrtipt/2image/DOMtag.png"></p>
-</blockquote>
-<hr>
-<h3 id="通过name获取元素"><a href="#通过name获取元素" class="headerlink" title="通过name获取元素"></a>通过name获取元素</h3><p>语法</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var ip&#x3D;document.getElementsByName(&quot;addr&quot;)</span><br></pre></td></tr></table></figure>
-<p>拿到所有name为addr的元素标签,得到的也是一个数组<br><img src="/2021/03/10/JavaScrtipt/2image/DOMname.png"></p>
-<hr>
-<h3 id="通过选择器获取-超级推荐"><a href="#通过选择器获取-超级推荐" class="headerlink" title="通过选择器获取(超级推荐)"></a>通过选择器获取(超级推荐)</h3><p>语法</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var odiv &#x3D; document.querySelector(&quot;div&quot;)</span><br><span class="line">var odiv &#x3D; document.querySelector(&quot;.content&quot;)</span><br><span class="line">var odiv &#x3D; document.querySelector(&quot;#content&quot;)</span><br></pre></td></tr></table></figure>
-<p>上面分别表示获取标签名为div的元素. 获取class为content的元素以及获取id为content的元素(语法类似JQuery).值得注意的是不管选择器实际选中多少都只会选择第一个元素而不是数组<br><img src="/2021/03/10/JavaScrtipt/2image/DOMqs.png"><br>如果想选择所有的元素返回一个数组的话可以使用querySelectorAll,语法如下</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var odiv &#x3D; document.querySelectorAll(&quot;div&quot;)</span><br><span class="line">var odiv &#x3D; document.querySelectorAll(&quot;.content&quot;)</span><br><span class="line">var odiv &#x3D; document.querySelectorAll(&quot;#content&quot;)</span><br></pre></td></tr></table></figure>
-<p>上面分别表示为获取所有div标签名,获取所有class为content的标签和虎丘所有id为content的标签.并都返回一个数组<br><img src="/2021/03/10/JavaScrtipt/2image/DOMqsa.png"></p>
-<hr>
-<h3 id="通过特殊元素获取"><a href="#通过特殊元素获取" class="headerlink" title="通过特殊元素获取"></a>通过特殊元素获取</h3><p><img src="/2021/03/10/JavaScrtipt/2image/DOMunique.png"></p>
-<h2 id="元素的自有属性"><a href="#元素的自有属性" class="headerlink" title="元素的自有属性"></a>元素的自有属性</h2><p>前面我们通过DOM拿到了元素标签,那么标签有哪些属性呢</p>
-<h3 id="内容属性之innerText"><a href="#内容属性之innerText" class="headerlink" title="内容属性之innerText"></a>内容属性之innerText</h3><p><img src="/2021/03/10/JavaScrtipt/2image/Attrin.png"></p>
-<blockquote>
-<p>注意:如果元素内容原来就有一些字符内容,那么原来的内容会被替换成js代码所设置的并且即使字符串内部有一些元素标签,编辑器也不会解析而是直接当作文本显示在网页上</p>
-</blockquote>
-<h3 id="内容属性之innerHTML"><a href="#内容属性之innerHTML" class="headerlink" title="内容属性之innerHTML"></a>内容属性之innerHTML</h3><p><img src="/2021/03/10/JavaScrtipt/2image/Attrih.png"><br>和innerText没什么不同，唯一不同点在于如果字符串内部有元素标签，编辑器会自动解析</p>
-<h3 id="class属性"><a href="#class属性" class="headerlink" title="class属性"></a>class属性</h3><p><img src="/2021/03/10/JavaScrtipt/2image/Attrclass.png"></p>
-<h3 id="id属性"><a href="#id属性" class="headerlink" title="id属性"></a>id属性</h3><p><img src="/2021/03/10/JavaScrtipt/2image/Attrid.png"></p>
-<h3 id="src属性"><a href="#src属性" class="headerlink" title="src属性"></a>src属性</h3><p><img src="/2021/03/10/JavaScrtipt/2image/Attrsrc.png"></p>
-<h1 id="浏览器事件和函数应用"><a href="#浏览器事件和函数应用" class="headerlink" title="浏览器事件和函数应用"></a>浏览器事件和函数应用</h1><h2 id="如何定义一个函数"><a href="#如何定义一个函数" class="headerlink" title="如何定义一个函数"></a>如何定义一个函数</h2><p>一个函数首先需要有一个名字，就像每个人都有自己的名字一样。函数内可以传递多个参数，然后执行函数内部的代码，如果有返回值的话可以用一个变量来负责接收。</p>
-<blockquote>
-<p>注意：JavaScript中如果定义了两个同名同参的函数则会覆盖前面那个函数，没有重载!<br><img src="/2021/03/10/JavaScrtipt/3image/fun.png"></p>
-</blockquote>
-<h2 id="函数的调用"><a href="#函数的调用" class="headerlink" title="函数的调用"></a>函数的调用</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">function fn(a,b)&#123;</span><br><span class="line">    return a+b</span><br><span class="line">&#125;</span><br><span class="line">fn(1,2)</span><br></pre></td></tr></table></figure>
-<p>函数的调用很简单,直接通过函数名进行调用,里面传递需要的参数<br><img src="/2021/03/10/JavaScrtipt/3image/funu.png"></p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/03/10/JavaScrtipt/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
     <article id="post-hexo的使用安装" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
@@ -382,6 +230,150 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2021/03/10/hexo%E7%9A%84%E4%BD%BF%E7%94%A8%E5%AE%89%E8%A3%85/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-JavaScrtipt" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/03/10/JavaScrtipt/">JavaScript的使用</a>
+    </h1>
+  
+
+        
+        <a href="/2021/03/10/JavaScrtipt/" class="archive-article-date">
+  	<time datetime="2021-03-10T02:47:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-10</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="简单介绍"><a href="#简单介绍" class="headerlink" title="简单介绍"></a>简单介绍</h1><ul>
+<li>JavaScript是一种属于网络的脚本语言，已经被广泛用于Web应用开发，用来为网页添加各式各样的动态功能，为用户提供更流畅美观的浏览效果。</li>
+<li>一个完整的JavaScript的实现应该由下列三个不同的部分组成:核心,文档对象模型和浏览器对象模型<br>使用方法很简单,在html文件中使用script标签,在这个标签里面的语法就是js的语法了,页面刷新的时候会自动读取</li>
+</ul>
+<h2 id="变量-值"><a href="#变量-值" class="headerlink" title="变量/值"></a>变量/值</h2><p>命令行</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ var x=2</span><br></pre></td></tr></table></figure>
+<p>可以理解为在计算机内存中开辟了一个大小为2的储存空间，然后用变量x来指向这个存储空间</p>
+<h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><ul>
+<li>数字类型(Number)<br>  1.整数<br>  2.浮点数<br>  3.NaN(全程为not a number)</li>
+</ul>
+<hr>
+<ul>
+<li>字符类型(String)<br>字符类型就是使用单引号或者双引号包裹起来的<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ var x =<span class="string">&quot;string&quot;</span></span><br></pre></td></tr></table></figure>
+这行代码中x就是字符型变量</li>
+</ul>
+<hr>
+<ul>
+<li>对象类型(object)<br>对象数据类型可以视作一组数据的集合,一般我们用大括号进行定义,具体定义为<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var lm =&#123;</span><br><span class="line">    name:<span class="string">&quot;灵梦&quot;</span>,</span><br><span class="line">    age: 18</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+这里lm就是一个对象类型的数据,当中的name和age这两个我们称为lm这个对象的<strong>属性</strong>,我们可以很容易判断,name属性是字符型变量而age则是数字型变量.</li>
+</ul>
+<hr>
+<ul>
+<li>数组类型(array)<br>数组数据类型也是一组数据的集合,从逻辑和形式上讲与object几乎一致,我们一般用中括号[]来定义<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var arr =[1,2,3,4]</span><br></pre></td></tr></table></figure>
+上图的arr变量就是一个数组类型的变量,数组具有下标,从零开始。例如arr[0]表示拿到数组中的第一个值(也就是1),arr[3]则表示拿到数组中第四个值(4)</li>
+</ul>
+<hr>
+<ul>
+<li>undefined类型<br>这个数据类型特别有意思<br>当我们用var声明了一个变量但未对其进行赋值的时候，那么这个变量的值就是undefined<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var a</span><br></pre></td></tr></table></figure>
+上面a变量就是属于undefined的，因为他并没有等于某个具体的值。当然我们后面可以再给a进行赋值,这是就不需要用var关键词了.例如后面输入<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a=2</span><br></pre></td></tr></table></figure>
+那么这时a就从undefined类型变成了number类型</li>
+</ul>
+<hr>
+<ul>
+<li>null类型(空值类型)<br>这个数据类型也特别有意思,null一般我们需要人为赋值,那你可能想问了这既然是个空值，我们为啥要定义? 对于这个问题其实很简单.在实际开发中你可能刚开始并不知道应该如何使用这个变量(但是我知道这个变量肯定是要赋值成对象类型),后面可能根据实际需求来进行操作,这时你就可以先变为null。语法<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var a = null</span><br></pre></td></tr></table></figure></li>
+</ul>
+<hr>
+<ul>
+<li>boolean类型(布尔类型)<br>布尔是啥,其实很简单，他只有两个值,一个true一个false,也就是我们常说的真和假。boolean一般是某个逻辑判断的结果,比如两个值是否相等,是否大于或者是否小于<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var a &#x3D; 3 </span><br><span class="line">var b &#x3D; 4</span><br><span class="line">var f &#x3D; a&gt;b</span><br></pre></td></tr></table></figure>
+此时f的数据类型就是一个布尔值并且很明显是false,因为a并不大于b(注意:代码会先执行a&gt;b然后把其结果赋值给f)<h2 id="浏览器弹窗功能"><a href="#浏览器弹窗功能" class="headerlink" title="浏览器弹窗功能"></a>浏览器弹窗功能</h2><h3 id="单一弹窗"><a href="#单一弹窗" class="headerlink" title="单一弹窗"></a>单一弹窗</h3>语法<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alert(&quot;此处输入内容&quot;)</span><br></pre></td></tr></table></figure>
+可以在网页上弹出一个窗口,该窗口的内容可自定义,点击确定按钮可以关闭弹窗<img src="/2021/03/10/JavaScrtipt/1image/tanchuang.png"><h3 id="确认弹窗"><a href="#确认弹窗" class="headerlink" title="确认弹窗"></a>确认弹窗</h3>语法<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">confirm(&quot;此处输入内容&quot;)</span><br></pre></td></tr></table></figure>
+在网页上弹出一个窗口,该窗口的内容可自定义,按确定键返回一个true的布尔值,按取消键返回一个false的布尔值.值得一提的是,我们可以用这行代码进行人机交互.举个栗子,如果用户在关闭我们博客的时候我们可以显示这个弹窗,上面显示”你真的要关闭吗?”如果用户点击确定则直接关闭,如果用户选择取消则可判断用户为误点<br><img src="/2021/03/10/JavaScrtipt/1image/ctanchuang.png"><h3 id="输入弹窗"><a href="#输入弹窗" class="headerlink" title="输入弹窗"></a>输入弹窗</h3>语法<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">prompt(&quot;此处输入内容)</span><br></pre></td></tr></table></figure>
+在网页上方弹出一个窗口,该窗口内容可以自定义,输入信息后按确认键返回所输入的信息,按取消键则直接返回<br><img src="/2021/03/10/JavaScrtipt/1image/ptanchuang.png"><h2 id="JavaScript基本注意事项"><a href="#JavaScript基本注意事项" class="headerlink" title="JavaScript基本注意事项"></a>JavaScript基本注意事项</h2></li>
+<li>严格区分大小写(var x=1; var X=1;x和X不是同一个变量)</li>
+<li>语法字符使用英文字符</li>
+<li>缩进对齐</li>
+<li>分号结尾</li>
+</ul>
+<h1 id="基础DOM操作"><a href="#基础DOM操作" class="headerlink" title="基础DOM操作"></a>基础DOM操作</h1><h2 id="DOM的核心理念"><a href="#DOM的核心理念" class="headerlink" title="DOM的核心理念"></a>DOM的核心理念</h2><p>DOM(document object model)我们也称之为文档对象模型.是针对HTML文档的一个API(Application programming interface).DOM描绘了一个层次化的节点数,允许开发人员<strong>添加,移除和修改</strong>页面元素,值得一提的是元素的文字也是DOM的一个节点<br><img src="/2021/03/10/JavaScrtipt/2image/DOMtree.png"></p>
+<h2 id="JavaScript获取元素"><a href="#JavaScript获取元素" class="headerlink" title="JavaScript获取元素"></a>JavaScript获取元素</h2><h3 id="通过ID获取元素"><a href="#通过ID获取元素" class="headerlink" title="通过ID获取元素"></a>通过ID获取元素</h3><p>语法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var content &#x3D; document.getElementById(&quot;content&quot;)</span><br></pre></td></tr></table></figure>
+<p>这样一来我们就得到id为content的那个元素(标签)了.DOM中的document代表的就是文档对象模型里面的文档对象.</p>
+<blockquote>
+<p>特别注意: 即使网页中有多个元素的id名称为同一个,那么js也只会选中第一个id名称符合条件的元素<br><img src="/2021/03/10/JavaScrtipt/2image/DOMid.png"></p>
+</blockquote>
+<hr>
+<h3 id="通过class获取元素"><a href="#通过class获取元素" class="headerlink" title="通过class获取元素"></a>通过class获取元素</h3><p>语法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var wrap &#x3D; document.getElementsByClassName(&quot;wrap&quot;)</span><br></pre></td></tr></table></figure>
+<p>得到class为wrap的元素标签.</p>
+<blockquote>
+<p>返回的是一个元素标签的数组集合(可以用getElements的这个s看到).并且值得一提的是,即使网页上只有一个元素的class属性符合标准，通过js获取到的依然是一个数组,只是这个数组里面的元素只有一个而已<br><img src="/2021/03/10/JavaScrtipt/2image/DOMclass.png"></p>
+</blockquote>
+<hr>
+<h3 id="通过标签名获取元素"><a href="#通过标签名获取元素" class="headerlink" title="通过标签名获取元素"></a>通过标签名获取元素</h3><p>语法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var wrap &#x3D; document.getElementsByTagName(&#39;div&#39;)</span><br></pre></td></tr></table></figure>
+<p>拿到所有的div标签</p>
+<blockquote>
+<p>同理我们可以看到Element后面加了s,所以拿到的和class一样,也是一个数组,即使只有一个<br><img src="/2021/03/10/JavaScrtipt/2image/DOMtag.png"></p>
+</blockquote>
+<hr>
+<h3 id="通过选择器获取-超级推荐"><a href="#通过选择器获取-超级推荐" class="headerlink" title="通过选择器获取(超级推荐)"></a>通过选择器获取(超级推荐)</h3><p>语法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var odiv &#x3D; document.querySelector(&quot;div&quot;)</span><br><span class="line">var odiv &#x3D; document.querySelector(&quot;.content&quot;)</span><br><span class="line">var odiv &#x3D; document.querySelector(&quot;#content&quot;)</span><br></pre></td></tr></table></figure>
+<p>上面分别表示获取标签名为div的元素. 获取class为content的元素以及获取id为content的元素(语法类似JQuery).值得注意的是不管选择器实际选中多少都只会选择第一个元素而不是数组<br><img src="/2021/03/10/JavaScrtipt/2image/DOMqs.png"><br>如果想选择所有的元素返回一个数组的话可以使用querySelectorAll,语法如下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var odiv &#x3D; document.querySelectorAll(&quot;div&quot;)</span><br><span class="line">var odiv &#x3D; document.querySelectorAll(&quot;.content&quot;)</span><br><span class="line">var odiv &#x3D; document.querySelectorAll(&quot;#content&quot;)</span><br></pre></td></tr></table></figure>
+<p>上面分别表示为获取所有div标签名,获取所有class为content的标签和虎丘所有id为content的标签.并都返回一个数组<br><img src="/2021/03/10/JavaScrtipt/2image/DOMqsa.png"></p>
+<hr>
+<h3 id="通过特殊元素获取"><a href="#通过特殊元素获取" class="headerlink" title="通过特殊元素获取"></a>通过特殊元素获取</h3><p><img src="/2021/03/10/JavaScrtipt/2image/DOMunique.png"></p>
+<h2 id="元素的自有属性"><a href="#元素的自有属性" class="headerlink" title="元素的自有属性"></a>元素的自有属性</h2><p>前面我们通过DOM拿到了元素标签,那么标签有哪些属性呢</p>
+<h3 id="内容属性之innerText"><a href="#内容属性之innerText" class="headerlink" title="内容属性之innerText"></a>内容属性之innerText</h3><p><img src="/2021/03/10/JavaScrtipt/2image/Attrin.png"></p>
+<blockquote>
+<p>注意:如果元素内容原来就有一些字符内容,那么原来的内容会被替换成js代码所设置的并且即使字符串内部有一些元素标签,编辑器也不会解析而是直接当作文本显示在网页上</p>
+</blockquote>
+<h3 id="内容属性之innerHTML"><a href="#内容属性之innerHTML" class="headerlink" title="内容属性之innerHTML"></a>内容属性之innerHTML</h3><p><img src="/2021/03/10/JavaScrtipt/2image/Attrih.png"><br>和innerText没什么不同，唯一不同点在于如果字符串内部有元素标签，编辑器会自动解析</p>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/03/10/JavaScrtipt/">展开全文 >></a>
         </p>
       
 

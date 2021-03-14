@@ -22,17 +22,11 @@
 <meta property="og:image" content="http://example.com/2021/03/10/JavaScrtipt/2image/DOMid.png">
 <meta property="og:image" content="http://example.com/2021/03/10/JavaScrtipt/2image/DOMclass.png">
 <meta property="og:image" content="http://example.com/2021/03/10/JavaScrtipt/2image/DOMtag.png">
-<meta property="og:image" content="http://example.com/2021/03/10/JavaScrtipt/2image/DOMname.png">
 <meta property="og:image" content="http://example.com/2021/03/10/JavaScrtipt/2image/DOMqs.png">
 <meta property="og:image" content="http://example.com/2021/03/10/JavaScrtipt/2image/DOMqsa.png">
 <meta property="og:image" content="http://example.com/2021/03/10/JavaScrtipt/2image/DOMunique.png">
 <meta property="og:image" content="http://example.com/2021/03/10/JavaScrtipt/2image/Attrin.png">
 <meta property="og:image" content="http://example.com/2021/03/10/JavaScrtipt/2image/Attrih.png">
-<meta property="og:image" content="http://example.com/2021/03/10/JavaScrtipt/2image/Attrclass.png">
-<meta property="og:image" content="http://example.com/2021/03/10/JavaScrtipt/2image/Attrid.png">
-<meta property="og:image" content="http://example.com/2021/03/10/JavaScrtipt/2image/Attrsrc.png">
-<meta property="og:image" content="http://example.com/2021/03/10/JavaScrtipt/3image/fun.png">
-<meta property="og:image" content="http://example.com/2021/03/10/JavaScrtipt/3image/funu.png">
 <meta property="og:image" content="http://example.com/2021/03/10/JavaScrtipt/3image/mousee.png">
 <meta property="og:image" content="http://example.com/2021/03/10/JavaScrtipt/3image/tablee.png">
 <meta property="og:image" content="http://example.com/2021/03/10/JavaScrtipt/3image/keye.png">
@@ -40,8 +34,16 @@
 <meta property="og:image" content="http://example.com/2021/03/10/JavaScrtipt/3image/dianji.png">
 <meta property="og:image" content="http://example.com/2021/03/10/JavaScrtipt/3image/boms.png">
 <meta property="og:image" content="http://example.com/2021/03/10/JavaScrtipt/3image/cssy.png">
+<meta property="og:image" content="http://example.com/2021/03/10/JavaScrtipt/4image/pnode.png">
+<meta property="og:image" content="http://example.com/2021/03/10/JavaScrtipt/4image/pno.png">
+<meta property="og:image" content="http://example.com/2021/03/10/JavaScrtipt/4image/bnode.png">
+<meta property="og:image" content="http://example.com/2021/03/10/JavaScrtipt/4image/anode.png">
+<meta property="og:image" content="http://example.com/2021/03/10/JavaScrtipt/5image/funup.png">
+<meta property="og:image" content="http://example.com/2021/03/10/JavaScrtipt/5image/funcu.png">
+<meta property="og:image" content="http://example.com/2021/03/10/JavaScrtipt/5image/bibao.png">
+<meta property="og:image" content="http://example.com/2021/03/10/JavaScrtipt/6image/arrsplice.png">
 <meta property="article:published_time" content="2021-03-10T02:47:43.000Z">
-<meta property="article:modified_time" content="2021-03-13T16:35:35.338Z">
+<meta property="article:modified_time" content="2021-03-14T10:53:54.652Z">
 <meta property="article:author" content="罗嘉杰">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://example.com/2021/03/10/JavaScrtipt/1image/tanchuang.png">
@@ -118,6 +120,12 @@
 					<a class="zhihu" target="_blank" href="https://www.zhihu.com/" title="zhihu"><i class="icon-zhihu"></i></a>
 		        
 			</div>
+			<!-- 《左侧边栏添加--网易云音乐插件 -->
+			<!-- https://www.writebug.site/2018/04/21/hexo-yilia个性化之-添加背景音乐/ -->
+			
+				<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=228 height=86 src="//music.163.com/outchain/player?type=2&id=814264&auto=1&height=66"></iframe>
+			
+			<!-- 网易云音乐插件》-->
 		</nav>
 	</header>		
 </div>
@@ -249,7 +257,6 @@
 <li>缩进对齐</li>
 <li>分号结尾</li>
 </ul>
-<p>&lt;! – more –&gt;</p>
 <h1 id="基础DOM操作"><a href="#基础DOM操作" class="headerlink" title="基础DOM操作"></a>基础DOM操作</h1><h2 id="DOM的核心理念"><a href="#DOM的核心理念" class="headerlink" title="DOM的核心理念"></a>DOM的核心理念</h2><p>DOM(document object model)我们也称之为文档对象模型.是针对HTML文档的一个API(Application programming interface).DOM描绘了一个层次化的节点数,允许开发人员<strong>添加,移除和修改</strong>页面元素,值得一提的是元素的文字也是DOM的一个节点<br><img src="/2021/03/10/JavaScrtipt/2image/DOMtree.png"></p>
 <h2 id="JavaScript获取元素"><a href="#JavaScript获取元素" class="headerlink" title="JavaScript获取元素"></a>JavaScript获取元素</h2><h3 id="通过ID获取元素"><a href="#通过ID获取元素" class="headerlink" title="通过ID获取元素"></a>通过ID获取元素</h3><p>语法</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var content &#x3D; document.getElementById(&quot;content&quot;)</span><br></pre></td></tr></table></figure>
@@ -272,10 +279,6 @@
 <p>同理我们可以看到Element后面加了s,所以拿到的和class一样,也是一个数组,即使只有一个<br><img src="/2021/03/10/JavaScrtipt/2image/DOMtag.png"></p>
 </blockquote>
 <hr>
-<h3 id="通过name获取元素"><a href="#通过name获取元素" class="headerlink" title="通过name获取元素"></a>通过name获取元素</h3><p>语法</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var ip&#x3D;document.getElementsByName(&quot;addr&quot;)</span><br></pre></td></tr></table></figure>
-<p>拿到所有name为addr的元素标签,得到的也是一个数组<br><img src="/2021/03/10/JavaScrtipt/2image/DOMname.png"></p>
-<hr>
 <h3 id="通过选择器获取-超级推荐"><a href="#通过选择器获取-超级推荐" class="headerlink" title="通过选择器获取(超级推荐)"></a>通过选择器获取(超级推荐)</h3><p>语法</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var odiv &#x3D; document.querySelector(&quot;div&quot;)</span><br><span class="line">var odiv &#x3D; document.querySelector(&quot;.content&quot;)</span><br><span class="line">var odiv &#x3D; document.querySelector(&quot;#content&quot;)</span><br></pre></td></tr></table></figure>
 <p>上面分别表示获取标签名为div的元素. 获取class为content的元素以及获取id为content的元素(语法类似JQuery).值得注意的是不管选择器实际选中多少都只会选择第一个元素而不是数组<br><img src="/2021/03/10/JavaScrtipt/2image/DOMqs.png"><br>如果想选择所有的元素返回一个数组的话可以使用querySelectorAll,语法如下</p>
@@ -289,15 +292,6 @@
 <p>注意:如果元素内容原来就有一些字符内容,那么原来的内容会被替换成js代码所设置的并且即使字符串内部有一些元素标签,编辑器也不会解析而是直接当作文本显示在网页上</p>
 </blockquote>
 <h3 id="内容属性之innerHTML"><a href="#内容属性之innerHTML" class="headerlink" title="内容属性之innerHTML"></a>内容属性之innerHTML</h3><p><img src="/2021/03/10/JavaScrtipt/2image/Attrih.png"><br>和innerText没什么不同，唯一不同点在于如果字符串内部有元素标签，编辑器会自动解析</p>
-<h3 id="class属性"><a href="#class属性" class="headerlink" title="class属性"></a>class属性</h3><p><img src="/2021/03/10/JavaScrtipt/2image/Attrclass.png"></p>
-<h3 id="id属性"><a href="#id属性" class="headerlink" title="id属性"></a>id属性</h3><p><img src="/2021/03/10/JavaScrtipt/2image/Attrid.png"></p>
-<h3 id="src属性"><a href="#src属性" class="headerlink" title="src属性"></a>src属性</h3><p><img src="/2021/03/10/JavaScrtipt/2image/Attrsrc.png"></p>
-<h1 id="浏览器事件和函数应用"><a href="#浏览器事件和函数应用" class="headerlink" title="浏览器事件和函数应用"></a>浏览器事件和函数应用</h1><h2 id="如何定义一个函数"><a href="#如何定义一个函数" class="headerlink" title="如何定义一个函数"></a>如何定义一个函数</h2><p>一个函数首先需要有一个名字，就像每个人都有自己的名字一样。函数内可以传递多个参数，然后执行函数内部的代码，如果有返回值的话可以用一个变量来负责接收。</p>
-<blockquote>
-<p>注意：JavaScript中如果定义了两个同名同参的函数则会覆盖前面那个函数，没有重载!<br><img src="/2021/03/10/JavaScrtipt/3image/fun.png"></p>
-</blockquote>
-<h2 id="函数的调用"><a href="#函数的调用" class="headerlink" title="函数的调用"></a>函数的调用</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">function fn(a,b)&#123;</span><br><span class="line">    return a+b</span><br><span class="line">&#125;</span><br><span class="line">fn(1,2)</span><br></pre></td></tr></table></figure>
-<p>函数的调用很简单,直接通过函数名进行调用,里面传递需要的参数<br><img src="/2021/03/10/JavaScrtipt/3image/funu.png"></p>
 <span id="more"></span>
 
 <h2 id="浏览器事件"><a href="#浏览器事件" class="headerlink" title="浏览器事件"></a>浏览器事件</h2><p>所谓事件就是用户在一个网页上所做出的某些操作动作,操作动作就是事件。前端中会发生事件的对象</p>
@@ -317,6 +311,99 @@
 <li>外部样式(单纯的js无法操作外部样式,所谓的外部样式是新建一个css文件按,之后使用link标签的href属性进行调用).假设你写了一个名字叫做mystyle的css样式文件,想引用的话可以<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;link rel&#x3D;&quot;stylesheet&quot; type&#x3D;&quot;text&#x2F;css&quot; href&#x3D;&quot;mystyle.css&quot;&gt;</span><br></pre></td></tr></table></figure></li>
 <li>内部样式(js可以操作HTML页面的任何元素,当然也包括style标签),例如如果想修改class名为ss的元素标签的color属性为绿色则可以(不推荐)<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">document.querySelector(&#39;style&#39;).innerHTML &#x3D; &quot;.ss&#123;color:green&#125;&quot;</span><br></pre></td></tr></table></figure></li>
 <li>行内样式<br>JS操作元素样式最常用方法,标签的自带属性style 通过点操作 元素.style.css属性 = “属性值”<br><img src="/2021/03/10/JavaScrtipt/3image/cssy.png"></li>
+</ul>
+<h1 id="DOM对象进阶"><a href="#DOM对象进阶" class="headerlink" title="DOM对象进阶"></a>DOM对象进阶</h1><h2 id="DOM的节点列表"><a href="#DOM的节点列表" class="headerlink" title="DOM的节点列表"></a>DOM的节点列表</h2><p>前面我们知道了DOM是针对HTML和XML文档的一个API且DOM描绘了一个层次化的<strong>节点树</strong>,允许开发人员添加,移除和修改页面的某一部分。节点可以分为以下几类</p>
+<ul>
+<li>文本节点</li>
+<li>属性节点</li>
+<li>注释节点</li>
+<li>元素节点<h3 id="父子节点"><a href="#父子节点" class="headerlink" title="父子节点"></a>父子节点</h3><img src="/2021/03/10/JavaScrtipt/4image/pnode.png"><br>其中childNodes表示获取该元素的子节点(返回的是一个新的NodeList包含文本节点).parentNode表示获取该元素节点的父节点(返回的是父元素本身)<br>类似的属性还有</li>
+<li>obj.firstChild:返回该元素子层级的第一个节点,若没有则返回null</li>
+<li>obj.lastChild:返回该元素子层级的最后一个节点,若没有则返回null<br><img src="/2021/03/10/JavaScrtipt/4image/pno.png"><br>牢记:子节点中文字和符号都会成为其中的一个节点</li>
+</ul>
+<h3 id="兄弟节点"><a href="#兄弟节点" class="headerlink" title="兄弟节点"></a>兄弟节点</h3><p><img src="/2021/03/10/JavaScrtipt/4image/bnode.png"><br>属性可分为:</p>
+<ul>
+<li>obj.nextsibling:表示当前节点的同一层级的下一个兄弟节点,如果当前节点已经是最后一个,那么下一个节点返回null</li>
+<li>obj.previousSibling:表示当前节点的同一层级的上一个兄弟节点<br>总结起来的话可以用下图表示<br><img src="/2021/03/10/JavaScrtipt/4image/anode.png"></li>
+</ul>
+<h3 id="节点操作"><a href="#节点操作" class="headerlink" title="节点操作"></a>节点操作</h3><ul>
+<li>判断是否有子节点:父节点.hasChildNodes() 返回true代表有,返回false代表没有</li>
+<li>父节点插入子节点: 父节点.appendChild(子节点) 给某父节点添加一个新的节点,添加的节点位于最下端</li>
+<li>子节点插入子节点: 父节点.insertBefore(新增子节点,原有子节点) 给某父节点内的某一个子节点添加一个新的子节点,添加的子节点位于原有子节点之前</li>
+<li>替换子节点: 父节点.replaceChild(新子节点,原有子节点) 把某父节点内的某一个子节点替换成一个新的子节点，添加的节点位于原有子节点之前</li>
+</ul>
+<h1 id="多种变量的声明方式let-const"><a href="#多种变量的声明方式let-const" class="headerlink" title="多种变量的声明方式let/const"></a>多种变量的声明方式let/const</h1><h2 id="var的变量提升"><a href="#var的变量提升" class="headerlink" title="var的变量提升"></a>var的变量提升</h2><p>var指令的作用就是在当前作用域下声明了一个变量,无论在什么作用域下,var指令都会被提前到该作用域代码的最前端</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">console.log(a);  &#x2F;&#x2F;undefined</span><br><span class="line">var a &#x3D; 10;</span><br><span class="line">console.log(a); &#x2F;&#x2F;10</span><br></pre></td></tr></table></figure>
+<p>上述代码等价于</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var a;</span><br><span class="line">console.log(a); &#x2F;&#x2F;undefined</span><br><span class="line">a &#x3D; 10;</span><br><span class="line">console.log(a); &#x2F;&#x2F;10</span><br></pre></td></tr></table></figure>
+<h2 id="函数的变量提升"><a href="#函数的变量提升" class="headerlink" title="函数的变量提升"></a>函数的变量提升</h2><p>无论在那个作用域中,函数声明指令也都会被提前到该作用域代码最前,函数声明指令会被提前到var指令之前.</p>
+<blockquote>
+<p>函数声明会被提前到var指令之前<br><img src="/2021/03/10/JavaScrtipt/5image/funup.png"><br><img src="/2021/03/10/JavaScrtipt/5image/funcu.png"></p>
+</blockquote>
+<h2 id="let-const指令"><a href="#let-const指令" class="headerlink" title="let/const指令"></a>let/const指令</h2><h3 id="let的块级作用域"><a href="#let的块级作用域" class="headerlink" title="let的块级作用域"></a>let的块级作用域</h3><p>var指令创造的变量只有函数作用域,在控制流程内不会产生作用域,外部也可以访问到控制流程内部的变量</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">if(true)&#123;</span><br><span class="line">    var c &#x3D; 30;</span><br><span class="line">&#125;</span><br><span class="line">console.log(c);  &#x2F;&#x2F;30</span><br><span class="line">for(var i&#x3D;0;i&lt;10;i++)&#123;</span><br><span class="line">    console.log(&quot;hello&quot;);</span><br><span class="line">&#125;</span><br><span class="line">console.log(i); &#x2F;&#x2F;10</span><br></pre></td></tr></table></figure>
+<p>而let指令却不同,使用let指令创造的变量存在块级作用域,控制流程内部let指令定义的变量在控制流程外部<strong>无法获取</strong>且let无法提升变量(称作let的临时死区)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">if(true)&#123;</span><br><span class="line">    let c&#x3D; 40;</span><br><span class="line">    console.log(c);  &#x2F;&#x2F;40</span><br><span class="line">&#125;</span><br><span class="line">console.log(c);  &#x2F;&#x2F;报错,c没被定义</span><br></pre></td></tr></table></figure>
+<p>我们可以继续用var来声明一个前面已经被var声明过的变量,此时这个var声明将被忽略,但是如果用let继续声明同一个变量则会报错,报错信息为变量已经被声明过了</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var i &#x3D;1;</span><br><span class="line">var i;   &#x2F;&#x2F;被忽略</span><br><span class="line">console.log(i); &#x2F;&#x2F; 1</span><br><span class="line">let i;  &#x2F;&#x2F; 报错</span><br></pre></td></tr></table></figure>
+<p>如果某个变量已经被let指令声明那么就不能再次使用let或者var声明</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">let i &#x3D; 10;</span><br><span class="line">var i; &#x2F;&#x2F;报错</span><br><span class="line">let i; &#x2F;&#x2F;报错</span><br></pre></td></tr></table></figure>
+<h3 id="const指令"><a href="#const指令" class="headerlink" title="const指令"></a>const指令</h3><p>const指令和let非常类似，区别就是:</p>
+<ul>
+<li>const定义好一个值之后不允许修改变量值</li>
+<li>初始化的时候就必须要赋值</li>
+<li>常量变量名请大写(不强制,不过这是代码的规范让别人一眼就可以看出来你声明的是常量)</li>
+</ul>
+<h3 id="经典案例"><a href="#经典案例" class="headerlink" title="经典案例"></a>经典案例</h3><p>请仔细阅读以下代码,当点击不同按钮的时候分析输出结果并思考为什么</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;button&gt;按钮0&lt;&#x2F;button&gt;</span><br><span class="line">&lt;button&gt;按钮1&lt;&#x2F;button&gt;</span><br><span class="line">&lt;button&gt;按钮2&lt;&#x2F;button&gt;</span><br><span class="line">&lt;button&gt;按钮3&lt;&#x2F;button&gt;</span><br><span class="line">&lt;button&gt;按钮4&lt;&#x2F;button&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">    let oBtn &#x3D; document.querySelectorAll(&quot;button&quot;);</span><br><span class="line">    for(var i&#x3D;0;i&lt;oBtn.length;i++)&#123;</span><br><span class="line">        oBtn(i).onclick &#x3D; function()&#123;</span><br><span class="line">            console.log(i);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
+<p>没错,不管你点击什么按钮,结果都是输出5.那么这是为什么呢?原因在于var这个关键字.我们上面知道var所声明的变量是整个全局作用域.当js代码全部加载完毕的时候i的值是5(for循环结束后),这个时候函数内部还没被调用(注意:当我们点击按钮函数内部代码才会被调用!).此时当我们点击按钮的时候console.log(i)的这个i实际上就是5了.那么怎么解决呢,很简单，下面介绍两种方法</p>
+<ul>
+<li>方法1 把var换成let<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;button&gt;按钮0&lt;&#x2F;button&gt;</span><br><span class="line">&lt;button&gt;按钮1&lt;&#x2F;button&gt;</span><br><span class="line">&lt;button&gt;按钮2&lt;&#x2F;button&gt;</span><br><span class="line">&lt;button&gt;按钮3&lt;&#x2F;button&gt;</span><br><span class="line">&lt;button&gt;按钮4&lt;&#x2F;button&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">    let oBtn &#x3D; document.querySelectorAll(&quot;button&quot;);</span><br><span class="line">    for(let i&#x3D;0;i&lt;oBtn.length;i++)&#123;</span><br><span class="line">        oBtn(i).onclick &#x3D; function()&#123;</span><br><span class="line">            console.log(i);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
+这样一来不同的按钮返回的值就会不同,原因也很简单let是块级,当代码全部加载完i并不会变成5</li>
+<li>方法2 闭包<br>闭包用简单的一句话说就是函数作用域内部嵌套一个函数作用域.<br>函数可以通过作用域链来互相关联起来,所以函数体内部的变量都可以保存在函数作用域内,一个简单闭包的例子<br><img src="/2021/03/10/JavaScrtipt/5image/bibao.png"><br>好了,我们已经知道了什么叫做闭包,那么怎么用闭包来解决呢,很简单我们只需要用闭包来保存每一次i的值不就可以了吗<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;button&gt;按钮0&lt;&#x2F;button&gt;</span><br><span class="line">&lt;button&gt;按钮1&lt;&#x2F;button&gt;</span><br><span class="line">&lt;button&gt;按钮2&lt;&#x2F;button&gt;</span><br><span class="line">&lt;button&gt;按钮3&lt;&#x2F;button&gt;</span><br><span class="line">&lt;button&gt;按钮4&lt;&#x2F;button&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">    var aBtn &#x3D; document.querySelectorAll(&quot;button&quot;);</span><br><span class="line">    for(var i&#x3D;0;i&lt;aBtn.length;i++)&#123;</span><br><span class="line">        aBtn[i].onclick &#x3D; (function(i)&#123;</span><br><span class="line">            return function()&#123;</span><br><span class="line">                console.log(i);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;)(i)</span><br><span class="line">    &#125;</span><br><span class="line">&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
+上面我们把每一次循环的i作为参数传递给了内部函数,这样一来内部函数就可以保存每次的i</li>
+</ul>
+<h1 id="数组详解"><a href="#数组详解" class="headerlink" title="数组详解"></a>数组详解</h1><h2 id="创建数组"><a href="#创建数组" class="headerlink" title="创建数组"></a>创建数组</h2><ul>
+<li>使用Array构造函数<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var arr &#x3D; new Array(3);</span><br><span class="line">var arr1 &#x3D; new Array(&quot;red&quot;,&quot;blue&quot;,&quot;green&quot;); </span><br></pre></td></tr></table></figure>
+第一行代码表示创造一个长度为3的空数组,第二个代表创建一个长度为3的数组,里面的元素分别为red,blue,green这三个字符串</li>
+<li>直接创建<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var arr &#x3D; [,,];</span><br><span class="line">var arr1 &#x3D; [&#39;red&#39;,&#39;blue&#39;,&#39;green&#39;]</span><br></pre></td></tr></table></figure>
+代码产生的效果同构造函数.</li>
+</ul>
+<h2 id="数组的基本方法"><a href="#数组的基本方法" class="headerlink" title="数组的基本方法"></a>数组的基本方法</h2><ul>
+<li>isArray<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var arr &#x3D; new Array(3);</span><br><span class="line">Array.isArray(arr);</span><br></pre></td></tr></table></figure>
+表示判断一个变量是否为数组类型,返回值为布尔型</li>
+<li>push/unshift<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var arr &#x3D; [1,2]</span><br><span class="line">arr.push(3); &#x2F;&#x2F;在数组最后增加一个元素3,同时数组的length自动加1</span><br><span class="line">arr.unshift(0); &#x2F;&#x2F;在数组的开头增加一个元素0,同时数组的length自动加1</span><br></pre></td></tr></table></figure></li>
+<li>pop/shift<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var arr &#x3D; [1,2,3,4]</span><br><span class="line">arr.pop(); &#x2F;&#x2F;删除数组的最后一个数组项目,同时数组的length减少1</span><br><span class="line">arr.shift(); &#x2F;&#x2F;删除数组的第一个元素,同时length减1</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="数组的高级方法"><a href="#数组的高级方法" class="headerlink" title="数组的高级方法"></a>数组的高级方法</h2><h3 id="高级方法之重排序"><a href="#高级方法之重排序" class="headerlink" title="高级方法之重排序"></a>高级方法之重排序</h3><p>数组的重排序主要包括两个:reserve方法和sort方法</p>
+<ul>
+<li>reserve方法<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var values &#x3D; [1,2,3,4,5]</span><br><span class="line">values.reserve();   &#x2F;&#x2F;此时原数组values也会变化</span><br><span class="line">console.log(values); &#x2F;&#x2F;5,4,3,2,1</span><br></pre></td></tr></table></figure>
+该方法直接在原始的数组上排序,只是单纯的反转数组中的元素.<blockquote>
+<p>该方法会改变原始的数组</p>
+</blockquote>
+</li>
+<li>sort方法<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var values &#x3D; [3,1,5,2,6,4];</span><br><span class="line">values.sort(); &#x2F;&#x2F; 1,2,3,4,5,6</span><br></pre></td></tr></table></figure>
+sort方法会按照字符串的先后顺序对数组的每一个数组项目的字符顺序来进行排序,如果数组的某个项目不是字符串,那么会把数组项目转换为字符串再来按照字符串的比较方法来排序<blockquote>
+<p>该方法也会该改变原始的数组<br>同时sort方法可以传入一个参数,该参数必须为一个函数(称之为比较函数),比较函数接收两个参数</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">var values &#x3D; [10,3,50,2,4];</span><br><span class="line">values.sort(function(value1,value2)&#123; &#x2F;&#x2F;values1和values2这两个参数表示任意两个数组项目两两对比</span><br><span class="line">if( value1&lt;value2 )&#123;</span><br><span class="line">    return -1;  &#x2F;&#x2F;如果返回-1则表示value1在数组前value2在后</span><br><span class="line">&#125; else if(value1&gt;value2)&#123;</span><br><span class="line">    return 1; &#x2F;&#x2F;如果返回1则表示value2在数组前value1在数组后</span><br><span class="line">&#125; else &#123;</span><br><span class="line">    return 0; &#x2F;&#x2F;返回0则表示value1和value2位置随便互换</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h3 id="高级方法之concat"><a href="#高级方法之concat" class="headerlink" title="高级方法之concat()"></a>高级方法之concat()</h3>concat方法可以基于当前数组中的所有项创建一个新数组,具体来说这个方法会先创建当前数组的一个副本,然后将接收到的参数添加到这个副本的末尾最后返回新构建的数组<blockquote>
+<p>concat不会改变原数组</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var colors &#x3D; [&#39;red&#39;,&#39;green&#39;,&#39;blue&#39;]</span><br><span class="line">var colors2 &#x3D; colors.concat();</span><br><span class="line">console.log(colors);</span><br><span class="line">console.log(colors2); </span><br></pre></td></tr></table></figure>
+在没有给concat方法传递参数的情况下,它只是赋值当前数组并返回副本。副本和原来的数组在内存的两个位置</li>
+</ul>
+<hr>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var colors &#x3D; [&#39;red&#39;,&#39;green&#39;,&#39;blue&#39;];</span><br><span class="line">var colors2 &#x3D; colors.concat(&#39;yellow&#39;,[&#39;black&#39;,&#39;brown&#39;]);</span><br><span class="line">console.log(colors); &#x2F;&#x2F;red,green,blue</span><br><span class="line">console.log(colors2); &#x2F;&#x2F;red,green,blue,yellow,black,brown</span><br></pre></td></tr></table></figure>
+<h2 id="如果传递给concat方法的是一个或者多个数组-则该方法会将这些数组中的每一项都添加到结果数组中"><a href="#如果传递给concat方法的是一个或者多个数组-则该方法会将这些数组中的每一项都添加到结果数组中" class="headerlink" title="如果传递给concat方法的是一个或者多个数组,则该方法会将这些数组中的每一项都添加到结果数组中"></a>如果传递给concat方法的是一个或者多个数组,则该方法会将这些数组中的每一项都添加到结果数组中</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var colors &#x3D; [&#39;red&#39;,&#39;green&#39;,&#39;blue&#39;];</span><br><span class="line">var colors2 &#x3D; colors.concat(&#39;yellow&#39;,&#39;black&#39;);</span><br><span class="line">console.log(colors); &#x2F;&#x2F;red,green,blue</span><br><span class="line">console.log(colors2); &#x2F;&#x2F; red,green,blue,yellow,blakc</span><br></pre></td></tr></table></figure>
+<h2 id="如果传递的值不是数组，这些值就会被简单地添加到结果数组的末尾"><a href="#如果传递的值不是数组，这些值就会被简单地添加到结果数组的末尾" class="headerlink" title="如果传递的值不是数组，这些值就会被简单地添加到结果数组的末尾"></a>如果传递的值不是数组，这些值就会被简单地添加到结果数组的末尾</h2><h3 id="高级方法之slice"><a href="#高级方法之slice" class="headerlink" title="高级方法之slice()"></a>高级方法之slice()</h3><p>splice是最强大的数组方法,可以完成删除,插入,替换操作</p>
+<ul>
+<li><p>删除<br>可以删除任何数量的项,只需指定2个参数,要删除的第一项的位置和要删除的项数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var colors &#x3D; [&#39;red&#39;,&#39;green&#39;,&#39;blue&#39;,&#39;yellow&#39;,&#39;purple&#39;];</span><br><span class="line">var colors2 &#x3D; colors.splice(0,2); </span><br><span class="line">console.log(colors); &#x2F;&#x2F; &#39;blue&#39;,&#39;yellow&#39;,&#39;purple&#39;</span><br><span class="line">console.log(colors2); &#x2F;&#x2F; &#39;red&#39;,&#39;green&#39;</span><br></pre></td></tr></table></figure></li>
+<li><p>插入<br>可以想指定位置插入任意数量的项,需要提供3个参数:起始位置,要删除的项和要插入的项。如果要插入多个项，可以在传入第四,第五以及任意多个项</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var colors &#x3D; [&#39;red&#39;,&#39;green&#39;,&#39;blue&#39;,&#39;yellow&#39;,&#39;purple&#39;];</span><br><span class="line">var colors2 &#x3D; colors.splice(2,0,&#39;red&#39;,&#39;green&#39;);</span><br><span class="line">console.log(colors); &#x2F;&#x2F; &#39;red&#39;,&#39;green&#39;,&#39;red&#39;,&#39;green&#39;,&#39;blue&#39;,&#39;yellow&#39;,&#39;purple&#39;</span><br><span class="line">console.log(colors2); &#x2F;&#x2F;空数组</span><br></pre></td></tr></table></figure>
+<p>具体可以用下图表示<br><img src="/2021/03/10/JavaScrtipt/6image/arrsplice.png"></p>
+</li>
 </ul>
 
       
@@ -421,11 +508,15 @@
   
 <nav id="article-nav">
   
-  
-    <a href="/2021/03/10/hexo%E7%9A%84%E4%BD%BF%E7%94%A8%E5%AE%89%E8%A3%85/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">hexo的使用安装</div>
-      <i class="icon-circle-right"></i>
+    <a href="/2021/03/10/hexo%E7%9A%84%E4%BD%BF%E7%94%A8%E5%AE%89%E8%A3%85/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          hexo的使用安装
+        
+      </div>
     </a>
+  
   
 </nav>
 
