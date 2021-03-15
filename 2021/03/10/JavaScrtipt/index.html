@@ -6,13 +6,13 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>JavaScript的使用 | Hexo</title>
+  <title>JavaScript的使用 | 落叶深雪</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="简单介绍 JavaScript是一种属于网络的脚本语言，已经被广泛用于Web应用开发，用来为网页添加各式各样的动态功能，为用户提供更流畅美观的浏览效果。 一个完整的JavaScript的实现应该由下列三个不同的部分组成:核心,文档对象模型和浏览器对象模型使用方法很简单,在html文件中使用script标签,在这个标签里面的语法就是js的语法了,页面刷新的时候会自动读取  变量&#x2F;值命令行 1$ va">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JavaScript的使用">
 <meta property="og:url" content="http://example.com/2021/03/10/JavaScrtipt/index.html">
-<meta property="og:site_name" content="Hexo">
+<meta property="og:site_name" content="落叶深雪">
 <meta property="og:description" content="简单介绍 JavaScript是一种属于网络的脚本语言，已经被广泛用于Web应用开发，用来为网页添加各式各样的动态功能，为用户提供更流畅美观的浏览效果。 一个完整的JavaScript的实现应该由下列三个不同的部分组成:核心,文档对象模型和浏览器对象模型使用方法很简单,在html文件中使用script标签,在这个标签里面的语法就是js的语法了,页面刷新的时候会自动读取  变量&#x2F;值命令行 1$ va">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://example.com/2021/03/10/JavaScrtipt/1image/tanchuang.png">
@@ -42,13 +42,16 @@
 <meta property="og:image" content="http://example.com/2021/03/10/JavaScrtipt/5image/funcu.png">
 <meta property="og:image" content="http://example.com/2021/03/10/JavaScrtipt/5image/bibao.png">
 <meta property="og:image" content="http://example.com/2021/03/10/JavaScrtipt/6image/arrsplice.png">
+<meta property="og:image" content="http://example.com/2021/03/10/JavaScrtipt/6image/arrreduce.png">
+<meta property="og:image" content="http://example.com/2021/03/10/JavaScrtipt/6image/arrMath.png">
+<meta property="og:image" content="http://example.com/2021/03/10/JavaScrtipt/6image/arrMathother.png">
 <meta property="article:published_time" content="2021-03-10T02:47:43.000Z">
-<meta property="article:modified_time" content="2021-03-14T10:53:54.652Z">
+<meta property="article:modified_time" content="2021-03-15T08:37:24.038Z">
 <meta property="article:author" content="罗嘉杰">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://example.com/2021/03/10/JavaScrtipt/1image/tanchuang.png">
   
-    <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="alternative" href="/atom.xml" title="落叶深雪" type="application/atom+xml">
   
   
     <link rel="icon" href="/img/websiteimage.png">
@@ -111,7 +114,7 @@
 		<nav class="header-nav">
 			<div class="social">
 				
-					<a class="github" target="_blank" href="https://github.com/luojiajie111" title="github"><i class="icon-github"></i></a>
+					<a class="github" target="_blank" href="https://github.com/luojiaj" title="github"><i class="icon-github"></i></a>
 		        
 					<a class="weibo" target="_blank" href="https://weibo.com/jp" title="weibo"><i class="icon-weibo"></i></a>
 		        
@@ -158,7 +161,7 @@
 			<nav class="header-nav">
 				<div class="social">
 					
-						<a class="github" target="_blank" href="https://github.com/luojiajie111" title="github"><i class="icon-github"></i></a>
+						<a class="github" target="_blank" href="https://github.com/luojiaj" title="github"><i class="icon-github"></i></a>
 			        
 						<a class="weibo" target="_blank" href="https://weibo.com/jp" title="weibo"><i class="icon-weibo"></i></a>
 			        
@@ -404,6 +407,71 @@ sort方法会按照字符串的先后顺序对数组的每一个数组项目的�
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var colors &#x3D; [&#39;red&#39;,&#39;green&#39;,&#39;blue&#39;,&#39;yellow&#39;,&#39;purple&#39;];</span><br><span class="line">var colors2 &#x3D; colors.splice(2,0,&#39;red&#39;,&#39;green&#39;);</span><br><span class="line">console.log(colors); &#x2F;&#x2F; &#39;red&#39;,&#39;green&#39;,&#39;red&#39;,&#39;green&#39;,&#39;blue&#39;,&#39;yellow&#39;,&#39;purple&#39;</span><br><span class="line">console.log(colors2); &#x2F;&#x2F;空数组</span><br></pre></td></tr></table></figure>
 <p>具体可以用下图表示<br><img src="/2021/03/10/JavaScrtipt/6image/arrsplice.png"></p>
 </li>
+</ul>
+<h2 id="数组的迭代和归并"><a href="#数组的迭代和归并" class="headerlink" title="数组的迭代和归并"></a>数组的迭代和归并</h2><p>ECMAScript5为数组定义了5个迭代方法</p>
+<h3 id="高级方法之迭代方法every-some"><a href="#高级方法之迭代方法every-some" class="headerlink" title="高级方法之迭代方法every/some"></a>高级方法之迭代方法every/some</h3><p>every和some方法很相似都可用于查询数组中的项是否满足某个条件.对every来说,传入的函数必须对每一项都返回true这个方法才会返回true.而some只需要传入的函数对数组中的<strong>某一项</strong>返回true就会返回true</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">var numbers &#x3D; [1,2,3,4,5,6];</span><br><span class="line">var everyResult &#x3D; numbers.every(function(item,index)&#123;</span><br><span class="line">    return (item&gt;2);</span><br><span class="line">&#125;);</span><br><span class="line">console.log(everyResult);  &#x2F;&#x2F; false</span><br><span class="line"></span><br><span class="line">var someResult &#x3D; numbers.some(funtion(item,index)&#123;</span><br><span class="line">    return (item&gt;2);</span><br><span class="line">&#125;)</span><br><span class="line">console.log(someResult); &#x2F;&#x2F; true</span><br></pre></td></tr></table></figure>
+<p>every和some中传递一个函数,函数的第一个参数item代表数组中的每一个元素,index则表示该元素的下标</p>
+<h3 id="高级方法之迭代方法filter"><a href="#高级方法之迭代方法filter" class="headerlink" title="高级方法之迭代方法filter"></a>高级方法之迭代方法filter</h3><p>它利用指定的函数中return语句的条件, 把所有符合该条件的数组项目组合成一个新的数组返回</p>
+<blockquote>
+<p>该方法不会修改原来的数组</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var numbers &#x3D; [1,2,3,4,5,6];</span><br><span class="line">var filterResult &#x3D; numbers.filter(function(item,index)&#123;</span><br><span class="line">    return (item&gt;2)</span><br><span class="line">&#125;);</span><br><span class="line">console.log(filterResult); &#x2F;&#x2F; [3,4,5,6]</span><br></pre></td></tr></table></figure>
+<p>返回一个所有数值都大于2的数组</p>
+<h3 id="高级方法之迭代方法map-重点"><a href="#高级方法之迭代方法map-重点" class="headerlink" title="高级方法之迭代方法map(重点)"></a>高级方法之迭代方法map(重点)</h3><p>map返回一个数组,这个新数组的每一项都是在原始数组中的对应的数组项目传入函数经过一系列处理的结果</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var numbers &#x3D; [1,2,3,4,5];</span><br><span class="line">var mapResult &#x3D; numbers.map(function(item.index)&#123;</span><br><span class="line">    return item*2;</span><br><span class="line">&#125;)</span><br><span class="line">console.log(mapResult);  &#x2F;&#x2F;[2,4,6,8,10]</span><br></pre></td></tr></table></figure>
+<p>给数组中的每一项乘以2然后返回这些乘积组成的数组</p>
+<h3 id="高级方法之迭代方法forEach"><a href="#高级方法之迭代方法forEach" class="headerlink" title="高级方法之迭代方法forEach"></a>高级方法之迭代方法forEach</h3><p>本质上同map,不过这个方法没有返回值,直接改变原数组</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var numbers &#x3D; [1,2,3,4,5,6];</span><br><span class="line">numbers.forEach(function(item,index,array)&#123;</span><br><span class="line">    array[index] +&#x3D; 10;</span><br><span class="line">&#125;)</span><br><span class="line">console.log(numbers); &#x2F;&#x2F;[11,12,13,14,15,16]</span><br></pre></td></tr></table></figure>
+<h3 id="高级方法之归并方法reduce"><a href="#高级方法之归并方法reduce" class="headerlink" title="高级方法之归并方法reduce"></a>高级方法之归并方法reduce</h3><p>这两个方法都会迭代数组的所有项,然后构建一个最终返回的值。其中,reduce方法从数组的第一项开始,逐个遍历到最后。而reduceRight则从数组的最后一项开始,向前遍历到第一项。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var values &#x3D; [1,2,3,4,5];</span><br><span class="line">var sum &#x3D; values.reduce(function(prev,cur,index,array)&#123;</span><br><span class="line">    return prev+cur;</span><br><span class="line">&#125;)</span><br><span class="line">console.log(sum); &#x2F;&#x2F; 15</span><br></pre></td></tr></table></figure>
+<p>function中的4个参数:前一个值,当前值,项的索引和数组对象。具体流程如下图<br><img src="/2021/03/10/JavaScrtipt/6image/arrreduce.png"></p>
+<h2 id="数学对象Math"><a href="#数学对象Math" class="headerlink" title="数学对象Math"></a>数学对象Math</h2><p>数学对象Math之对象的属性(基本常量)<br><img src="/2021/03/10/JavaScrtipt/6image/arrMath.png"><br>Math对象还包含了许多方法,用于辅助完成简单和复杂的数学计算.其中,min和max方法用于确定一组数值中的最小值和最大值</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var max &#x3D; Math.max(3,54,32,16);</span><br><span class="line">console.log(max); &#x2F;&#x2F; 54</span><br><span class="line">var min &#x3D; Math.min(3,54,32,16);</span><br><span class="line">console.log(min); &#x2F;&#x2F;3</span><br></pre></td></tr></table></figure>
+<p>将小数舍入为整数的方法有</p>
+<ul>
+<li>Math.ceil<br>Math.ceil执行向上舍入<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">console.log(Math.ceil(25.9)); &#x2F;&#x2F;26</span><br><span class="line">console.log(Math.ceil(25.1)); &#x2F;&#x2F;26</span><br></pre></td></tr></table></figure></li>
+<li>Math.floor<br>Math.floor执行向下舍入<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">console.log(Math.floor(25.9)); &#x2F;&#x2F; 25</span><br><span class="line">console.log(Math.floor(25.1)); &#x2F;&#x2F; 25</span><br></pre></td></tr></table></figure></li>
+<li>Math.round<br>Math.round执行标准的四舍五入<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">console.log(Math.round(25.4)); &#x2F;&#x2F; 25</span><br><span class="line">console.log(Math.round(25.5)); &#x2F;&#x2F; 26</span><br></pre></td></tr></table></figure>
+取随机数的方法为Math.random,该方法返回一个大于或等于0且小于1的随机数<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">console.log(Math.random()); &#x2F;&#x2F;随机返回</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>如果我们想实现返回任意两个数min~max之间的随机数,我们可以改造成</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">function random(min,max)&#123;</span><br><span class="line">    return Math.random()*(max-min) + min;</span><br><span class="line">&#125;</span><br><span class="line">random(3,4);  &#x2F;&#x2F;随机返回3到4之间的随机数</span><br><span class="line">random(233,2333); &#x2F;&#x2F; 随机返回233到2333中的随机数</span><br></pre></td></tr></table></figure>
+除了以上常见到的几种外,Math还有一些其他方法<br><img src="/2021/03/10/JavaScrtipt/6image/arrMathother.png"><h2 id="延时器"><a href="#延时器" class="headerlink" title="延时器"></a>延时器</h2>延时器顾名思义就是延迟代码的执行,语法为setTimeout函数,该函数可以传递两个参数,第一个为延迟执行的函数,第二个为延迟执行的时间(单位为毫秒)<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">setTimeout(function()&#123;</span><br><span class="line">    console.log(a)  &#x2F;&#x2F;1秒后返回10</span><br><span class="line">&#125;,1000); &#x2F;&#x2F;延迟1秒后执行console.log(a)</span><br><span class="line">var a &#x3D; 10;</span><br></pre></td></tr></table></figure>
+<h2 id="定时器"><a href="#定时器" class="headerlink" title="定时器"></a>定时器</h2>定时器顾名思义就是每隔一段时间就执行一遍代码并且<strong>永不停歇</strong>!语法为setInterval,里面也是传递两个参数,第一个为执行函数第二个为间隔时间<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">setInterval(function()&#123;</span><br><span class="line">    console.log(a)  &#x2F;&#x2F;每隔1秒返回一次a的值</span><br><span class="line">&#125;,1000)   &#x2F;&#x2F; 间隔1秒执行一次函数</span><br><span class="line">var a &#x3D; 10;</span><br></pre></td></tr></table></figure>
+那么我们应该如何关闭呢,也很简单.ES5给我们提供了一个方法叫做clearInterval来关闭.<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var timer &#x3D; setInterval(function()&#123;  &#x2F;&#x2F;设置一个定时器名字叫做timer</span><br><span class="line">    console.log(a);</span><br><span class="line">&#125;,1000);</span><br><span class="line">var a &#x3D;10;</span><br><span class="line">setTimeout(function()&#123;</span><br><span class="line">    clearInterval(timer); &#x2F;&#x2F;延迟5秒后清除定时器timer</span><br><span class="line">&#125;,5000)</span><br></pre></td></tr></table></figure>
+<h1 id="日期对象详解"><a href="#日期对象详解" class="headerlink" title="日期对象详解"></a>日期对象详解</h1><h2 id="创建日期对象"><a href="#创建日期对象" class="headerlink" title="创建日期对象"></a>创建日期对象</h2>创建日期对象,使用new操作符和Date构造函数即可<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var now &#x3D; new Date()</span><br></pre></td></tr></table></figure>
+在调用Date构造函数而不传递参数的情况下,新创建的对象将自动获得当前日期和时间<h2 id="日期对象的计算"><a href="#日期对象的计算" class="headerlink" title="日期对象的计算"></a>日期对象的计算</h2><h3 id="计算代码运行时间"><a href="#计算代码运行时间" class="headerlink" title="计算代码运行时间"></a>计算代码运行时间</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var start &#x3D; Date.now(); &#x2F;&#x2F;取得开始时间</span><br><span class="line">doSomething(); &#x2F;&#x2F;调用函数</span><br><span class="line">var stop &#x3D; Date.now(); &#x2F;&#x2F;取得结束时间</span><br><span class="line">result &#x3D; stop - start; &#x2F;&#x2F;计算doSomething的计算时间</span><br></pre></td></tr></table></figure>
+<h3 id="日期对象的方法"><a href="#日期对象的方法" class="headerlink" title="日期对象的方法"></a>日期对象的方法</h3>日期对象的格式化方法</li>
+<li>toDateString()返回格式为”星期 月 日 年”<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">let nowT &#x3D; new Date();</span><br><span class="line">let time &#x3D; nowT.toDateString(); &#x2F;&#x2F; Mon Mar 15 2021</span><br></pre></td></tr></table></figure></li>
+<li>toTimeString()返回格式是”时 分 秒 时区”<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">let nowT &#x3D; new Date();</span><br><span class="line">let Time &#x3D; nowT.toTimeString();</span><br><span class="line">console.log(Time);  &#x2F;&#x2F; 15:47:54</span><br></pre></td></tr></table></figure></li>
+<li>toLocaleDateString()返回格式为”年/月/日”<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">let nowT &#x3D; new Date();</span><br><span class="line">let Time &#x3D; nowT.toLocaleDateString();</span><br><span class="line">console.log(Time); &#x2F;&#x2F; 2021&#x2F;3&#x2F;15</span><br></pre></td></tr></table></figure></li>
+<li>toLocaleString()返回格式为”年/月/日 时/分/秒”<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">let nowT &#x3D; new Date();</span><br><span class="line">let Time &#x3D; nowT.toLocaleString();</span><br><span class="line">console.log(time); &#x2F;&#x2F; 2021&#x2F;3&#x2F;15 下午15:51 </span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="字符串方法"><a href="#字符串方法" class="headerlink" title="字符串方法"></a>字符串方法</h2><ul>
+<li>charAt获取字符串中下标的值<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">let str &#x3D; &#39;luoye&#39;;</span><br><span class="line">str[0]; &#x2F;&#x2F;&quot;l&quot; 低版本ie不兼容</span><br><span class="line">str.charAt(0); &#x2F;&#x2F; &quot;l&quot;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<hr>
+<ul>
+<li>concat拼接字符串<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">let str &#x3D; &quot;luo&quot;,</span><br><span class="line">str2 &#x3D; &#39;ye&#39;</span><br><span class="line">let str3 &#x3D; str1.concat(str2,&quot;shenxue&quot;); &#x2F;&#x2F; str1+str2+&quot;shenxue&quot; &quot;luoyeshenxue&quot;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<hr>
+<ul>
+<li>indexOf查询元素下标<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">let str &#x3D; &#39;luoye&#39;;</span><br><span class="line">str.indexOf(&#39;u&#39;); &#x2F;&#x2F; 1</span><br><span class="line">str.indexOf(&#39;A&#39;); &#x2F;&#x2F; -1 不存在就返回-1</span><br></pre></td></tr></table></figure></li>
+</ul>
+<hr>
+<ul>
+<li>slice进行字符串的裁剪<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">let str &#x3D; &#39;luoye&#39;;</span><br><span class="line">let str2 &#x3D; str.slice(0,3); &#x2F;&#x2F;&quot;luo&quot; 裁剪[0,3)区间的字符</span><br><span class="line">let str3 &#x3D; str.slice(-1); &#x2F;&#x2F;从最后一位开始到结束,可以是负数</span><br></pre></td></tr></table></figure></li>
+</ul>
+<hr>
+<ul>
+<li>split进行字符串切割<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">let str &#x3D; &#39;落叶1落叶2落叶3&#39;;</span><br><span class="line">let a &#x3D; str.split(&quot;叶&quot;);</span><br><span class="line">console.log(a);  &#x2F;&#x2F;[&quot;落&quot;,&quot;1落&quot;,&quot;2落&quot;,&quot;3&quot;]</span><br></pre></td></tr></table></figure>
+如果传入空值, 那么就是把整个字符串都变成数组的一个数组项目<br>如果传入空字符串,那么每一个单个字符都变成数组的一个数组项目<br>如果传入其他的字符,那么以这个字符为分割线,分隔字符串, 并把分隔后的每一小块的字符变成数组的一个数组项目</li>
+</ul>
+<hr>
+<ul>
+<li>trim方法可以删除字符串前面和后面的空格<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">let str &#x3D; &quot; hello &quot;;</span><br><span class="line">str.trim();</span><br><span class="line">console.log(str); &#x2F;&#x2F; &quot;hello&quot;前后空格已经消去了</span><br></pre></td></tr></table></figure></li>
 </ul>
 
       
@@ -690,7 +758,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
         <ul class="search-ul">
           
             <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接1</a>
+              <a href="http://luojiajie111.github.io" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接1</a>
             </li>
           
             <li class="search-li">
